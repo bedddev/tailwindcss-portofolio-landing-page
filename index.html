@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Landing Page</title>
+    <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+<body class="bg-neutral">
+    <header class="mx-auto max-w-screen-xl px-4 md:px-0">
+        <div class="flex h-16 items-center justify-between">
+            <h1 class="font-bold tracking-tighter text-xl text-gray-900">Deni Kuro</h1>
+            <!-- Navbar Desktop -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-6 text-base">
+                    <li><a href="#" class="text-gray-900 transition hover:text-gray-900/75 tracking-[.02em]">Home</a></li>
+                    <li><a href="#" class="text-gray-900 transition hover:text-gray-900/75 tracking-[.02em]">About</a></li>
+                    <li><a href="#" class="text-gray-900 transition hover:text-gray-900/75 tracking-[.02em]">Experience</a></li>
+                    <li><a href="#" class="text-gray-900 transition hover:text-gray-900/75 tracking-[.02em]">Portofolio</a></li>
+                    <li><a href="#" class="text-gray-900 transition hover:text-gray-900/75 tracking-[.02em]">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="block md:hidden z-20 absolute right-0 px-5">
+                <button class="bg-secondary p-2 text-white rounded-lg" id="toggle">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        >
+                        <path
+                            class=""
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"
+                            id="toggle-hamburger"
+                        />
+                        <path
+                            id="toggle-x"
+                            class="hidden"
+                            d="M4.33478 4.33447C4.44092 4.22806 4.56702 4.14364 4.70584 4.08603C4.84466 4.02843 4.99348 3.99878 5.14378 3.99878C5.29407 3.99878 5.4429 4.02843 5.58172 4.08603C5.72054 4.14364 5.84663 4.22806 5.95277 4.33447L11.9997 10.3837L18.0466 4.33447C18.1528 4.22824 18.2789 4.14396 18.4177 4.08647C18.5566 4.02897 18.7053 3.99938 18.8556 3.99938C19.0058 3.99938 19.1546 4.02897 19.2934 4.08647C19.4322 4.14396 19.5583 4.22824 19.6646 4.33447C19.7708 4.44071 19.8551 4.56684 19.9126 4.70565C19.9701 4.84445 19.9997 4.99323 19.9997 5.14347C19.9997 5.29372 19.9701 5.44249 19.9126 5.5813C19.8551 5.7201 19.7708 5.84623 19.6646 5.95247L13.6154 11.9994L19.6646 18.0463C19.7708 18.1525 19.8551 18.2786 19.9126 18.4174C19.9701 18.5562 19.9997 18.705 19.9997 18.8553C19.9997 19.0055 19.9701 19.1543 19.9126 19.2931C19.8551 19.4319 19.7708 19.558 19.6646 19.6643C19.5583 19.7705 19.4322 19.8548 19.2934 19.9123C19.1546 19.9698 19.0058 19.9994 18.8556 19.9994C18.7053 19.9994 18.5566 19.9698 18.4177 19.9123C18.2789 19.8548 18.1528 19.7705 18.0466 19.6643L11.9997 13.6151L5.95277 19.6643C5.84653 19.7705 5.72041 19.8548 5.5816 19.9123C5.44279 19.9698 5.29402 19.9994 5.14378 19.9994C4.99353 19.9994 4.84476 19.9698 4.70595 19.9123C4.56714 19.8548 4.44102 19.7705 4.33478 19.6643C4.22854 19.558 4.14427 19.4319 4.08677 19.2931C4.02928 19.1543 3.99968 19.0055 3.99968 18.8553C3.99968 18.705 4.02928 18.5562 4.08677 18.4174C4.14427 18.2786 4.22854 18.1525 4.33478 18.0463L10.384 11.9994L4.33478 5.95247C4.22837 5.84632 4.14394 5.72023 4.08634 5.58141C4.02873 5.44259 3.99908 5.29377 3.99908 5.14347C3.99908 4.99317 4.02873 4.84435 4.08634 4.70553C4.14394 4.56671 4.22837 4.44062 4.33478 4.33447Z"
+                            fill="white"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <!-- Navbar Mobile -->
+            <nav id="navigation" class="hidden md:hidden fixed z-10 bg-secondary w-11/12 h-80 mt-2 top-0 rounded-xl p-4 shadow-2xl flex items-center border-[3px] border-solid border-gray-900">
+                <ul class="flex flex-col gap-3">
+                    <li><a href="#" class="text-white transition hover:opacity-90 font-medium tracking-[.02.em] text-xl">Home</a></li>
+                    <li><a href="#" class="text-white transition hover:opacity-90 font-medium tracking-[.02.em] text-xl">About</a></li>
+                    <li><a href="#" class="text-white transition hover:opacity-90 font-medium tracking-[.02.em] text-xl">Experience</a></li>
+                    <li><a href="#" class="text-white transition hover:opacity-90 font-medium tracking-[.02.em] text-xl">Portofolio</a></li>
+                    <li><a href="#" class="text-white transition hover:opacity-90 font-medium tracking-[.02.em] text-xl">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="mx-auto max-w-screen-xl h-full md:py-10 hero">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+            <div class="bg-secondary h-full md:h-[38rem] p-7 rounded-xl md:rounded-none mt-5 md:mt-0 hero-grid">
+                <h1 class="text-white font-normal text-4xl md:text-5xl md:leading-[50px] mt-0 md:mt-11 opacity-90">
+                    Building stuffs for the web are accessible and human centered design.
+                </h1>
+                <button class="text-gray-900 font-medium text-base md:text-2xl flex items-center gap-2 bg-white py-2 px-5 rounded-2xl mt-8 hover:opacity-80 shadow-lg hover:shadow-2xl">
+                    Let's talk
+                    <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M21.75 12.5C21.75 12.7724 21.6023 13.0233 21.3642 13.1556L19.0819 14.4236C14.5705 16.9299 9.81474 18.9687 4.88879 20.508L4.22371 20.7159C3.99598 20.787 3.74798 20.7456 3.55575 20.6043C3.36352 20.4629 3.25 20.2386 3.25 20L3.25 14.25C3.25 13.859 3.55041 13.5336 3.94019 13.5024L4.16752 13.4842C6.31898 13.3121 8.45387 12.9829 10.5552 12.4997C8.42436 12.0098 6.25902 11.6782 4.0769 11.5083L3.94175 11.4977C3.55131 11.4673 3.25 11.1416 3.25 10.75L3.25 5.00001C3.25 4.76142 3.36352 4.53706 3.55575 4.39574C3.74798 4.25441 3.99598 4.21298 4.22371 4.28415L4.88878 4.49198C9.81474 6.03134 14.5705 8.07008 19.0819 10.5764L21.3642 11.8444C21.6023 11.9767 21.75 12.2276 21.75 12.5ZM19.4557 12.5L18.3534 11.8877C14.0256 9.48333 9.46847 7.51801 4.75 6.02089L4.75 10.0596C7.68008 10.3238 10.5783 10.8702 13.4043 11.6912L13.7092 11.7798C14.0299 11.8729 14.2503 12.1668 14.25 12.5007C14.2497 12.8346 14.0287 13.1281 13.7078 13.2206L13.3173 13.3333C10.5188 14.1404 7.65003 14.6784 4.75 14.94L4.75 18.9791C9.46846 17.482 14.0256 15.5167 18.3534 13.1124L19.4557 12.5Z"
+                            fill="black"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:block h-[38rem] relative flex justify-center hero-grid">
+                <div class="bg-yellow h-[28rem] md:absolute inset-x-0 bottom-0"></div>
+                <img src="./assets/img/image-profile.png" alt="" class="md:absolute bottom-0 w-[80%]">
+            </div>
+            <div class="hidden md:block bg-primary h-full md:h-[38rem] px-7 flex flex-col items-center pb-7 hero-grid">
+                <img src="./assets/img/img-1.png" alt="" class="w-96 md:w-full">
+                <p class="text-white text-2xl mt-12 opacity-90">
+                    Blending the design with web programming skills to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-screen-xl h-full pt-16 pb-32 px-4 md:px-0 service">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div>
+                <h1 class="font-bold text-6xl underline decoration-solid w-full md:w-1/2 leading-[120%] text-gray-900">
+                    Service I Offer
+                </h1>
+                <p class="text-2xl w-full md:w-4/5 mt-8 mb-12 text-gray-900 font-light">
+                    I help ambitios business like your, generate more profits by building awareness, driving web trafic, connecting with customer and growing overal sales.
+                </p>
+            </div>
+            <div>
+               <div class="flex item-center justify-between border-t-2 border-gray-700 py-8 group cursor-pointer service-list">
+                    <div class="w-4/5">
+                        <h1 class="font-light text-6xl group-hover:line-through decoration-primary transition-all group-hover:!ml-2 text-gray-900">
+                            Web Design
+                        </h1>
+                        <p class="text-xl mt-4 text-gray-800">I start by learn and research based on client and resource to gain about the needs.</p>
+                    </div>
+                    <button class="group-hover:bg-primary border-2 border-primary w-20 h-20 rounded-full flex justify-center items-center transition-all">
+                        <svg
+                            width="31"
+                            height="37"
+                            viewBox="0 0 31 37"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                            d="M26.6887 0.465069C28.52 -0.7583 31.1879 0.558223 30.9896 2.93937L30.9317 3.63386C30.0493 14.2293 28.183 24.7261 25.3555 34.997C24.6821 37.4431 21.2977 37.6538 20.2703 35.3866L16.0161 25.9994C15.6094 25.102 14.6219 24.526 13.5503 24.6407L3.02521 25.7679C0.609322 26.0266 -1.09799 23.0768 0.838123 21.2077C8.61006 13.7047 17.0637 6.89492 26.0963 0.860802L26.6887 0.465069Z"
+                            fill="white"
+                            class="group-hover:fill-white fill-primary"
+                            />
+                        </svg>
+                    </button>
+               </div> 
+               <div class="flex item-center justify-between border-t-2 border-gray-700 py-8 group cursor-pointer service-list">
+                    <div class="w-4/5">
+                        <h1 class="font-light text-6xl group-hover:line-through decoration-primary transition-all group-hover:!ml-2 text-gray-900">
+                            UX/UI
+                        </h1>
+                        <p class="text-xl mt-4 text-gray-800">I start by learn and research based on client and resource to gain about the needs.</p>
+                    </div>
+                    <button class="group-hover:bg-primary border-2 border-primary w-20 h-20 rounded-full flex justify-center items-center transition-all">
+                        <svg
+                            width="31"
+                            height="37"
+                            viewBox="0 0 31 37"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                            d="M26.6887 0.465069C28.52 -0.7583 31.1879 0.558223 30.9896 2.93937L30.9317 3.63386C30.0493 14.2293 28.183 24.7261 25.3555 34.997C24.6821 37.4431 21.2977 37.6538 20.2703 35.3866L16.0161 25.9994C15.6094 25.102 14.6219 24.526 13.5503 24.6407L3.02521 25.7679C0.609322 26.0266 -1.09799 23.0768 0.838123 21.2077C8.61006 13.7047 17.0637 6.89492 26.0963 0.860802L26.6887 0.465069Z"
+                            fill="white"
+                            class="group-hover:fill-white fill-primary"
+                            />
+                        </svg>
+                    </button>
+               </div> 
+               <div class="flex item-center justify-between border-t-2 border-gray-700 py-8 group cursor-pointer service-list">
+                    <div class="w-4/5">
+                        <h1 class="font-light text-6xl group-hover:line-through decoration-primary transition-all group-hover:!ml-2 text-gray-900">
+                            Branding
+                        </h1>
+                        <p class="text-xl mt-4 text-gray-800">I start by learn and research based on client and resource to gain about the needs.</p>
+                    </div>
+                    <button class="group-hover:bg-primary border-2 border-primary w-20 h-20 rounded-full flex justify-center items-center transition-all">
+                        <svg
+                            width="31"
+                            height="37"
+                            viewBox="0 0 31 37"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                            d="M26.6887 0.465069C28.52 -0.7583 31.1879 0.558223 30.9896 2.93937L30.9317 3.63386C30.0493 14.2293 28.183 24.7261 25.3555 34.997C24.6821 37.4431 21.2977 37.6538 20.2703 35.3866L16.0161 25.9994C15.6094 25.102 14.6219 24.526 13.5503 24.6407L3.02521 25.7679C0.609322 26.0266 -1.09799 23.0768 0.838123 21.2077C8.61006 13.7047 17.0637 6.89492 26.0963 0.860802L26.6887 0.465069Z"
+                            fill="white"
+                            class="group-hover:fill-white fill-primary"
+                            />
+                        </svg>
+                    </button>
+               </div> 
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-screen-xl h-full pb-32 px-4 md:px-0 working-process">
+        <h1 class="font-bold text-4xl md:text-6xl underline decoration-solid w-full md:w-[40%] leading-[120%] text-gray-900">
+            Let’s have a look on my working process
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="border-b-4 border-secondary py-5 working-process-list">
+                <h1 class="font-medium text-3xl text-gray-900">01. /Dicoverry</h1>
+                <p class="text-gray-700 mt-3 text-lg font-medium">
+                    I start bt learn and research base on client brief and resource to gain about the needs, goals, product and requirements.
+                </p>
+            </div>
+            <div class="border-b-4 border-yellow py-5 working-process-list">
+                <h1 class="font-medium text-3xl text-gray-900">02. /Strategy</h1>
+                <p class="text-gray-700 mt-3 text-lg font-medium">
+                    Then start to plan and structure the project process and budget bases on the discovery phase before start design.
+                </p>
+            </div>
+            <div class="border-b-4 border-primary py-5 working-process-list">
+                <h1 class="font-medium text-3xl text-gray-900">03. /Design</h1>
+                <p class="text-gray-700 mt-3 text-lg font-medium">
+                    After i complete all the process, goals and scope. I will start to do the design process such as creating user flow, wireframe, until finish.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-screen-xl h-full pb-32 px-4 md:px-0 projects">
+        <h1 class="font-bold text-4xl md:text-6xl underline decoration-solid text-gray-900">My latest projects</h1>
+        <div class="flex justify-start w-full group cursor-pointer project-list">
+            <div class="w-full md:w-3/4 mt-12">
+                <div class="flex items-center justify-between">
+                    <h1 class="font-light text-3xl md:text-5xl w-3/4 text-gray-900">
+                        Architecture Landing Page
+                    </h1>
+                    <button class="group-hover:bg-primary border-2 border-primary w-20 h-20 rounded-full flex justify-center items-center transition-all">
+                        <svg
+                            width="31"
+                            height="37"
+                            viewBox="0 0 31 37"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                            d="M26.6887 0.465069C28.52 -0.7583 31.1879 0.558223 30.9896 2.93937L30.9317 3.63386C30.0493 14.2293 28.183 24.7261 25.3555 34.997C24.6821 37.4431 21.2977 37.6538 20.2703 35.3866L16.0161 25.9994C15.6094 25.102 14.6219 24.526 13.5503 24.6407L3.02521 25.7679C0.609322 26.0266 -1.09799 23.0768 0.838123 21.2077C8.61006 13.7047 17.0637 6.89492 26.0963 0.860802L26.6887 0.465069Z"
+                            fill="white"
+                            class="group-hover:fill-white fill-primary"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <img src="./assets/img/image-1.png" alt="" class="w-full mt-8 rounded-2xl group-hover:shadow-xl transition-all">
+            </div>
+        </div>
+        <div class="flex justify-end w-full group cursor-pointer project-list">
+            <div class="w-full md:w-3/4 mt-12">
+                <div class="flex items-center justify-between">
+                    <h1 class="font-light text-3xl md:text-5xl w-3/4 text-gray-900">
+                        3D NFT Landing Page.
+                    </h1>
+                    <button class="group-hover:bg-primary border-2 border-primary w-20 h-20 rounded-full flex justify-center items-center transition-all">
+                        <svg
+                            width="31"
+                            height="37"
+                            viewBox="0 0 31 37"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                            d="M26.6887 0.465069C28.52 -0.7583 31.1879 0.558223 30.9896 2.93937L30.9317 3.63386C30.0493 14.2293 28.183 24.7261 25.3555 34.997C24.6821 37.4431 21.2977 37.6538 20.2703 35.3866L16.0161 25.9994C15.6094 25.102 14.6219 24.526 13.5503 24.6407L3.02521 25.7679C0.609322 26.0266 -1.09799 23.0768 0.838123 21.2077C8.61006 13.7047 17.0637 6.89492 26.0963 0.860802L26.6887 0.465069Z"
+                            fill="white"
+                            class="group-hover:fill-white fill-primary"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <img src="./assets/img/image-2.png" alt="" class="w-full mt-8 rounded-2xl group-hover:shadow-xl transition-all">
+            </div>
+        </div>
+        <div class="flex justify-start w-full group cursor-pointer project-list">
+            <div class="w-full md:w-3/4 mt-12">
+                <div class="flex items-center justify-between">
+                    <h1 class="font-light text-3xl md:text-5xl w-3/4 text-gray-900">
+                        Keyboard Landing Page.
+                    </h1>
+                    <button class="group-hover:bg-primary border-2 border-primary w-20 h-20 rounded-full flex justify-center items-center transition-all">
+                        <svg
+                            width="31"
+                            height="37"
+                            viewBox="0 0 31 37"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                            d="M26.6887 0.465069C28.52 -0.7583 31.1879 0.558223 30.9896 2.93937L30.9317 3.63386C30.0493 14.2293 28.183 24.7261 25.3555 34.997C24.6821 37.4431 21.2977 37.6538 20.2703 35.3866L16.0161 25.9994C15.6094 25.102 14.6219 24.526 13.5503 24.6407L3.02521 25.7679C0.609322 26.0266 -1.09799 23.0768 0.838123 21.2077C8.61006 13.7047 17.0637 6.89492 26.0963 0.860802L26.6887 0.465069Z"
+                            fill="white"
+                            class="group-hover:fill-white fill-primary"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <img src="./assets/img/image-3.png" alt="" class="w-full mt-8 rounded-2xl group-hover:shadow-xl transition-all">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary rounded-3xl md:rounded-none about">
+        <div class="mx-auto max-w-screen-xl h-full px-4 md:px-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
+                <div class="flex justify-center md:justify-start">
+                    <img src="./assets/img/image-profil-2.png" alt="" class="w-3/4 md:w-4/5">
+                </div>
+                <div class="flex flex-col gap-4 md:gap-10 w-full md:w-4/5 justify-center">
+                    <h1 class="font-light text-5xl text-white text-center md:text-start">
+                        I am creative designer base in UK
+                    </h1>
+                    <p class="text-white text-lg md:text-xl text-center md:text-start opacity-90 font-light">
+                        I am a creative person who work on a full design service like web design, UX/UI and branding.
+                    </p>
+                    <p class="text-white text-lg md:text-xl text-center md:text-start opacity-90 font-light">
+                        I am comitted to solve any problems with a different way of thinking and love by having a discussion to solve your problem and develop your bussiness.
+                    </p>
+                    <div class="opacity-80 pb-5">
+                        <h1 class="underline decoration-solid text-white text-xl font-medium text-center md:text-start">
+                            Find me also here
+                        </h1>
+                        <div class="flex gap-4 justify-center md:justify-start">
+                            <img src="./assets/img/Behance.svg" alt="" class="w-8">
+                            <img src="./assets/img/Linkedin.svg" alt="" class="w-8">
+                            <img src="./assets/img/Instagram.svg" alt="" class="w-8">
+                            <img src="./assets/img/Twitter.svg" alt="" class="w-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-screen-xl h-full py-32 px-4 md:px-0 testimonial">
+        <h1 class="font-bold text-4xl md:text-6xl underline decoration-solid text-gray-900">
+            Reviews from <br class="hidden md:block"> clients
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 mt-10 gap-6">
+            <div class="bg-yellow p-5 rounded-xl border-gray-900 flex flex-col gap-4 testimonial-list border-[3px] text-gray-900">
+                <h1 class="font-bold text-lg md:text-2xl">Doni is a creative design and he just amazing</h1>
+                <p class="font-light md:text-xl text-base">“We have had some personal website and dashboards. he always delivered on time. The best quality with endless iterations. Good jobs Doni! .”</p>
+                <div>
+                    <h1 class="font-bold text-xl underline underline decoration-solid">
+                        Alex fernando
+                    </h1>
+                    <div class="flex gap-1">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-primary p-5 rounded-xl border-gray-900 flex flex-col gap-4 testimonial-list border-[3px] text-white">
+                <h1 class="font-bold text-lg md:text-2xl">Doni is a creative design and he just amazing</h1>
+                <p class="font-light md:text-xl text-base">“We have had some personal website and dashboards. he always delivered on time. The best quality with endless iterations. Good jobs Doni! .”</p>
+                <div>
+                    <h1 class="font-bold text-xl underline underline decoration-solid">
+                        Alex fernando
+                    </h1>
+                    <div class="flex gap-1">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-secondary p-5 rounded-xl border-gray-900 flex flex-col gap-4 testimonial-list border-[3px] text-white">
+                <h1 class="font-bold text-lg md:text-2xl">Doni is a creative design and he just amazing</h1>
+                <p class="font-light md:text-xl text-base">“We have had some personal website and dashboards. he always delivered on time. The best quality with endless iterations. Good jobs Doni! .”</p>
+                <div>
+                    <h1 class="font-bold text-xl underline underline decoration-solid">
+                        Alex fernando
+                    </h1>
+                    <div class="flex gap-1">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                        <img src="./assets/img/star.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary py-16 md:py-32 flex flex-col items-center rounded-3xl md:rounded-none contact">
+        <h1 class="text-3xl md:text-5xl text-white text-center">
+            Interested in working together <br class="hidden md:block">
+            with me?
+        </h1>
+        <button class="text-gray-900 font-medium text-base md:text-2xl flex items-center gap-2 bg-white py-3 px-5 rounded-2xl mt-8 hover:opacity-80 shadow-lg hover:shadow-2xl text-center">
+            Let's talk
+            <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.75 12.5C21.75 12.7724 21.6023 13.0233 21.3642 13.1556L19.0819 14.4236C14.5705 16.9299 9.81474 18.9687 4.88879 20.508L4.22371 20.7159C3.99598 20.787 3.74798 20.7456 3.55575 20.6043C3.36352 20.4629 3.25 20.2386 3.25 20L3.25 14.25C3.25 13.859 3.55041 13.5336 3.94019 13.5024L4.16752 13.4842C6.31898 13.3121 8.45387 12.9829 10.5552 12.4997C8.42436 12.0098 6.25902 11.6782 4.0769 11.5083L3.94175 11.4977C3.55131 11.4673 3.25 11.1416 3.25 10.75L3.25 5.00001C3.25 4.76142 3.36352 4.53706 3.55575 4.39574C3.74798 4.25441 3.99598 4.21298 4.22371 4.28415L4.88878 4.49198C9.81474 6.03134 14.5705 8.07008 19.0819 10.5764L21.3642 11.8444C21.6023 11.9767 21.75 12.2276 21.75 12.5ZM19.4557 12.5L18.3534 11.8877C14.0256 9.48333 9.46847 7.51801 4.75 6.02089L4.75 10.0596C7.68008 10.3238 10.5783 10.8702 13.4043 11.6912L13.7092 11.7798C14.0299 11.8729 14.2503 12.1668 14.25 12.5007C14.2497 12.8346 14.0287 13.1281 13.7078 13.2206L13.3173 13.3333C10.5188 14.1404 7.65003 14.6784 4.75 14.94L4.75 18.9791C9.46846 17.482 14.0256 15.5167 18.3534 13.1124L19.4557 12.5Z"
+                    fill="black"
+                />
+            </svg>
+        </button>
+    </section>
+
+    <footer class="py-6">
+        <p class="text-center font-medium text-gray-900 text-base-md:text-xl">
+            Copyright © 2022 Doni Kuro all rights reserved.
+        </p>
+    </footer>
+
+    <script src="./assets/js/scrollreveal.js"></script>
+
+    <script>
+        const toggle = document.querySelector("#toggle")
+        const toggleHamburger = document.querySelector("#toggle-hamburger")
+        const toggleX = document.querySelector("#toggle-x")
+        const navigation = document.querySelector("#navigation")
+
+        toggle.addEventListener("click", () => {
+            if(navigation.classList.contains('hidden')){
+                navigation.classList.remove('hidden')
+                toggleHamburger.classList.add('hidden')
+                toggleX.classList.remove('hidden')
+            }else{
+                navigation.classList.add('hidden')
+                toggleHamburger.classList.remove('hidden')
+                toggleX.classList.add('hidden')
+            }
+        })
+
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        })
+
+        sr.reveal('header, footer', {distance: '0', opacity: 0})
+        sr.reveal('.hero-grid', {interval: 600, scale: 0.85})
+        sr.reveal('.service, .working-process, .projects, .about, .testimonial, .contact')
+        sr.reveal('.service-list', {interval: 800, origin: 'left'})
+        sr.reveal('.project-list, .testimonial-list', {interval: 400})
+        sr.reveal('.working-process-list', {interval: 500, origin: 'top', distance: '30px'})
+    </script>
+</body>
+</html>
